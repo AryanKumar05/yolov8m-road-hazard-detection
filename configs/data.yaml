@@ -1,0 +1,20 @@
+# data.yaml — Dataset Configuration Template
+# ─────────────────────────────────────────────────────────────────
+# Fill in the `path` field with the absolute path to your dataset
+# root directory. The train/val/test fields are relative to `path`.
+#
+# Download your dataset from Roboflow and drop it here.
+# ─────────────────────────────────────────────────────────────────
+
+path: /absolute/path/to/your/dataset   # ← EDIT THIS
+
+train: images/train
+val:   images/valid
+test:  images/test
+
+nc: 4
+names:
+  0: pothole
+  1: hump
+  2: human
+  3: vehicle

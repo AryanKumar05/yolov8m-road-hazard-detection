@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════════════════
+#  .gitignore — YOLOv8m Road Hazard Detection
+#  Rule: If it is binary, large, generated, or secret — exclude it.
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Model Weights (use GitHub Releases instead) ──────────────────
+weights/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.torchscript
+*.mlmodel
+
+# ── Datasets (share via Roboflow link / data.yaml only) ──────────
+datasets/
+data/
+images/
+labels/
+*.cache
+*.npy
+
+# ── Training Run Outputs ─────────────────────────────────────────
+runs/
+experiments/*/weights/
+experiments/*/train/
+experiments/*/val/
+
+# ── MLflow Artefacts ─────────────────────────────────────────────
+mlruns/
+runs/mlflow/
+
+# ── Auto-generated Figures & Tables ──────────────────────────────
+figures/
+tables/
+*.png
+*.jpg
+*.jpeg
+!docs/assets/*.png
+
+# ── SLURM / HPC Logs ─────────────────────────────────────────────
+logs/
+*.log
+*.err
+slurm-*.out
+
+# ── Python Environment ───────────────────────────────────────────
+.venv/
+env/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+*.egg-info/
+dist/
+build/
+*.egg
+.installed.cfg
+
+# ── Jupyter ──────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDE / Editor ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS Artefacts ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── CUDA / C++ Build ─────────────────────────────────────────────
+*.so
+*.dll
+*.cu.o
+*.o
+
+# ── Temporary ────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+debug_output/
+tmp/
+
+# ── Secrets (never commit these) ─────────────────────────────────
+.env
+*.pem
+*.key
+secrets.yaml
